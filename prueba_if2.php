@@ -23,9 +23,9 @@
             $notaAlta = $nota1;
         }
     
-}
+    }
 
-    echo"<br> $notaAlta es la nota mas alta";
+    echo"</br> $notaAlta es la nota mas alta";
     
     
         switch ($notaAlta) {

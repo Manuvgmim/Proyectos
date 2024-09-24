@@ -32,6 +32,6 @@
 
         <h1>Contador</h1>
 
-        <p> <?php cuenta(20,10,2) ?> </p>
+        <p> <?php cuenta(20,10) ?> </p>
 </body>
 </html>

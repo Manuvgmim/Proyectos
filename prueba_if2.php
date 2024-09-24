@@ -25,27 +25,27 @@
     
 }
 
-    echo"<br>$notaAlta es la nota mas alta";
+    echo"<br> $notaAlta es la nota mas alta";
     
     
         switch ($notaAlta) {
-            case $notaAlta < 5:
+            case ($notaAlta < 5):
                 echo "Insuficiente $notaAlta";
                 break;
             
-            case $notaAlta < 6 && $notaAlta > 5:
+            case ($notaAlta < 6 && $notaAlta > 5):
                 echo "Suficiente $notaAlta";
                 break;
             
-            case $notaAlta < 7 && $notaAlta > 6:
+            case ($notaAlta < 7 && $notaAlta > 6):
                 echo "Bien $notaAlta";
                 break;
             
-            case $notaAlta < 7 && $notaAlta > 9:
+            case ($notaAlta < 7 && $notaAlta > 9):
                 echo "Notable $notaAlta";
                 break;
 
-            case $notaAlta < 9 && $notaAlta > 10:
+            case ($notaAlta < 9 && $notaAlta > 10):
                 echo "Sobresaliente $notaAlta";
                 break;
         }

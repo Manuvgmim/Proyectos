@@ -7,12 +7,12 @@
 </head>
 <body>
 <?php
-    define("PI". 3.141598);
+    define("PI", 3.141598);
     $radio = 3.5;
 
 
     $area = PI * ($radio*$radio);
-    echo"El área del círculo es $area";
+    echo "El área del círculo es $area";
     ?>
 </body>
 </html>

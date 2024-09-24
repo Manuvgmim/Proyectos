@@ -11,21 +11,19 @@
     $nota1 = rand(0,10);
     $nota2 = rand(0,10);
     $nota3 = rand(0,10);
-    echo $nota1,$nota2,$nota3;
-    $notaAlta;
-
-    if ($nota1 >= $nota2 && $nota2 >= $nota3)
-    {       
-        $notaAlta = $nota3;
-        if($nota2 > $nota3){
-            $notaAlta = $nota2;
-        }else{
-            $notaAlta = $nota1;
-        }
     
-    }
 
-    echo"</br> $notaAlta es la nota mas alta";
+    if ($nota1 >= $nota2 && $nota1 >= $nota3) {
+        $notaAlta = $nota1;
+    } elseif ($nota2 >= $nota1 && $nota2 >= $nota3) {
+        $notaAlta = $nota2;
+    } else {
+        $notaAlta = $nota3;
+    }
+    
+    
+
+    echo"</br> $notaAlta es la nota mas alta</br>";
     
     
         switch ($notaAlta) {
@@ -33,19 +31,19 @@
                 echo "Insuficiente $notaAlta";
                 break;
             
-            case ($notaAlta < 6 && $notaAlta > 5):
+            case ($notaAlta >= 5 && $notaAlta < 6):
                 echo "Suficiente $notaAlta";
                 break;
-            
-            case ($notaAlta < 7 && $notaAlta > 6):
+                
+            case ($notaAlta >= 6 && $notaAlta < 7):
                 echo "Bien $notaAlta";
                 break;
-            
-            case ($notaAlta < 7 && $notaAlta > 9):
+                
+            case ($notaAlta >= 7 && $notaAlta < 9):
                 echo "Notable $notaAlta";
                 break;
-
-            case ($notaAlta < 9 && $notaAlta > 10):
+        
+            case ($notaAlta >= 9):
                 echo "Sobresaliente $notaAlta";
                 break;
         }

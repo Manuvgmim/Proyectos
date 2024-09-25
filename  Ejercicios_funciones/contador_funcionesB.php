@@ -8,7 +8,7 @@
 <body>
     
     <?php
-        function cuenta($a,$b,$c = 1){
+        function cuentab($a,$b,$c = 1){
             
             if($c <= 0 ){
                 echo"No se pueden hacer los calculos";
@@ -32,6 +32,6 @@
 
         <h1>Contador</h1>
 
-        <p> <?php cuenta(20,10) ?> </p>
+        <p> <?php cuentab(20,10) ?> </p>
 </body>
 </html>

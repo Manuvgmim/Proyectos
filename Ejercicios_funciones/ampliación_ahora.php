@@ -14,13 +14,15 @@
             $meses = ($segundos/60/60/24/30);
             $dias = ($segundos/60/60/24);
 
+            $anyo = floor($anyo);
+            $meses = floor($meses);
             return "Has vivido una cantidad de $anyo años, $meses meses, $dias dias.";
         }
 
         date_default_timezone_set('Europe/Madrid');
 
         $fechaActual = time();
-        $fechaD = strtotime("28/10/2004");
+        $fechaD = strtotime("2004-10-28");
         
         $segundos = $fechaActual - $fechaD;
 

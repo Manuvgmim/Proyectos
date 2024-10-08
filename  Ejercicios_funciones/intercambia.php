@@ -16,7 +16,7 @@
         }
         $a = 2;
         $b = 100;
-        echo"A = $a <br> B = $b ";
+        echo"A = $a <br>B = $b ";
         intercambia($a,$b);   
         echo"<br> A = $a <br> B = $b ";
     ?>

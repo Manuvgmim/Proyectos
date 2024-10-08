@@ -12,7 +12,7 @@
         if(file_exists($fichero)){
             $contenido = file_get_contents($fichero);
 
-            $contenidoModificado = preg_replace("/^\w{3,}+@\w{3,}+.\d[A-Za-z]{2,}$/","Fran@gmail.com",$contenido);
+            $contenidoModificado = preg_replace("/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/",$contenido);
 
             file_put_contents($ficherocopia,$contenidoModificado);
             

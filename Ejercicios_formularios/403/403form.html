@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+
+    <form action="403validacion.php" method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+
+        <label for="apellidos">Apellidos</label>
+        <input type="text" id="apellidos" name="apellidos" required>
+        <br>
+
+        <label for="url">URL</label>
+        <input type="url" id="url" name="url">
+        <br>
+
+        <label for="sexo">Sexo</label> <br>
+        
+            <input type="radio" id="masculino" name="sexo" value="masculino" required>
+            <label for="masculino">Masculino</label><br>
+            <input type="radio" id="femenino" name="sexo" value="femenino" required>
+            <label for="femenino">Femenino</label><br>
+            <input type="radio" id="???" name="sexo" value="???" required>
+            <label for="??">Otro</label><br>
+        
+        <label for="convivientes">Número de convivientes</label>
+        <input type="number" id="convivientes" name="convivientes" min="0"><br>
+
+        <fieldset>
+            <legend>Aficiones</legend>
+
+            <input type="checkbox" id="aficiones" name="deporte" value="deporte">
+            <label for="deporte">Deporte</label><br>
+
+            <input type="checkbox" id="aficiones" name="videojuegos" value="videojuegos">
+            <label for="videojuegos">Videojuegos</label><br>
+
+            <input type="checkbox" id="aficiones" name="musica" value="musica">
+            <label for="musica">Música</label><br>
+
+            <input type="checkbox" id="aficiones" name="fiesta" value="fiesta">
+            <label for="fiesta">Fiesta</label><br>
+
+        </fieldset>
+
+        
+            <label for="menu-favorito">Menú favorito:</label>
+            <select id="menu-favorito" name="menu[]" multiple size="4">
+                <option value="pizza">Pizza</option>
+                <option value="sushi">Sushi</option>
+                <option value="hamburguesa">Hamburguesa</option>
+                <option value="pasta">Pasta</option>
+                <option value="tacos">Tacos</option>
+                <option value="ensalada">Ensalada</option>
+                <option value="mariscos">Mariscos</option>
+            </select>
+            <br><br>
+            <button type="submit">Enviar</button>
+
+    </form>
+</body>
+</html>

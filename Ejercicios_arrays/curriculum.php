@@ -10,35 +10,15 @@
         $estudios_es = "Educación secundaria obligatoria y Grado Medio SMR";
         $estudios_en = "Compulsory secondary education and Intermediate Grade SMR";
 
-        function parseDefaultLanguage($http_accept, $deflang = "en") {
-
-            if (isset($http_accept) && strlen($http_accept) > 1)  {
-        
-            $x = explode(",",$http_accept);
-        
-            foreach ($x as $val) {
-        
-                if (preg_match("/(.*);q=([0-1]{0,1}.\d{0,4})/i",$val,$matches)) {
-        
-                    $lang[$matches[1]] = (float)$matches[2];
-                } 
-                else {
-        
-                    $lang[$val] = 1.0;
-                }
-            }
-            }
-        }
-
-        function idiomaNavegador(){
-            return parseDefaultLanguage($_SERVER["HTTP_ACCEPT_LANGUAGE"]);
-        }
-
-        $idioma = idiomaNavegador();
+        $idioma = $_GET["idioma"];
 
         $texto = "estudios_". $idioma;
 
-        echo $$texto;
+        if (isset($estudios[$idioma])) {
+            echo "<p>$texto</p>";
+        } else {
+            echo "<p>Idioma no soportado</p>"; 
+        }
     ?>
 </body>
 </html>
